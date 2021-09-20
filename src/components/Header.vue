@@ -74,6 +74,10 @@ export default {
     align-items: center;
     height: 100px;
 
+    img {
+      width: 70px;
+    }
+
     ul li {
       list-style: none;
       display: inline-block;
