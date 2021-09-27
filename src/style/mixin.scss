@@ -1,0 +1,61 @@
+@mixin center($type: 'both') {
+    display: flex;
+
+    @if $type == 'vertical'{
+        align-items: center;
+    }@else if $type == 'horizontal'{
+        justify-content: center;
+    }@else if $type == 'both'{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin centerCol($type: 'both') {
+    display: flex;
+    flex-direction: column;
+
+    @if $type == 'vertical'{
+        justify-content: center;
+    }@else if $type == 'horizontal'{
+        align-items: center;
+    }@else if $type == 'both'{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin button($type: 'colored'){
+        @if $type == 'colored'{
+            button{
+                border: 2px solid $blue;
+                padding: 10px 30px;
+                color: $txt-light;
+                font-size: $fs-s;
+                font-weight: $bold;
+                cursor: pointer;
+                background: linear-gradient(to right, $blue 50%, transparent 50%) left;
+                background-size: 300%;  
+            }
+        }
+        @else if $type == 'light'{
+            button{
+                border: 2px solid $blue;
+                padding: 10px 30px;
+                color: $txt-light;
+                font-size: $fs-s;
+                font-weight: $bold;
+                cursor: pointer;
+                transition: 0.5s ease-out;
+                background: linear-gradient(to right, transparent 50%, $blue 50%) left;
+                background-size: 300%;
+            }
+        }
+    }
+
+
+// TRANSITION
+$fast: 0.2s;
+$medium: 0.5s;
+$slow: 1s;
+
